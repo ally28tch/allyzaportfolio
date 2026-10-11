@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allyza Aclan — IT Student &amp; Aspiring UI/UX Designer</title>
+<meta name="description" content="Portfolio of Allyza Aclan, IT student and aspiring UI/UX designer from Batangas State University.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<div class="bg-layer" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ========== HEADER ========== -->
+<header class="site-nav" id="siteNav">
+  <a href="#home" class="brand" data-nav-link data-target="home">
+    <img class="brand-logo" src="images/logo.png" alt="Ally Aclan logo">
+  </a>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <ul>
+      <li><button type="button" data-nav-link data-target="home" class="nav-link active">Home</button></li>
+      <li><button type="button" data-nav-link data-target="about" class="nav-link">About</button></li>
+      <li><button type="button" data-nav-link data-target="projects" class="nav-link">Projects</button></li>
+      <li><button type="button" data-nav-link data-target="advocacy" class="nav-link">Advocacy</button></li>
+      <li><button type="button" data-nav-link data-target="shop" class="nav-link">Shop</button></li>
+      <li><button type="button" data-nav-link data-target="contact" class="nav-link">Contact</button></li>
+    </ul>
+  </nav>
+
+  <button type="button" class="cart-toggle" id="cartToggle" aria-label="Open shopping cart" aria-haspopup="dialog">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9.5" cy="20.5" r="1.2"/><circle cx="17.5" cy="20.5" r="1.2"/></svg>
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+
+  <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <button type="button" data-nav-link data-target="home" class="mobile-link">Home</button>
+  <button type="button" data-nav-link data-target="about" class="mobile-link">About</button>
+  <button type="button" data-nav-link data-target="projects" class="mobile-link">Projects</button>
+  <button type="button" data-nav-link data-target="advocacy" class="mobile-link">Advocacy</button>
+  <button type="button" data-nav-link data-target="shop" class="mobile-link">Shop</button>
+  <button type="button" data-nav-link data-target="contact" class="mobile-link">Contact</button>
+</div>
+
+<main>
+<div class="card-stage" id="cardStage">
+
+  <!-- ========== HOME ========== -->
+  <section class="portfolio-card" id="home" data-section="home" aria-label="Home">
+    <div class="card-inner card-inner--home">
+      <h1 class="hero-title">
+        <span class="hero-hi">Hi there,</span>
+        <span class="hero-name">I&rsquo;m Allyza Aclan</span>
+      </h1>
+
+      <p class="hero-intro">A BSIT student with a passion for graphic design, creative layouts, and turning ideas into meaningful visuals.</p>
+
+      <p class="hero-tagline">Designing ideas. Building possibilities.</p>
+
+      <button type="button" class="btn btn-primary btn-hero" data-nav-link data-target="about">
+        Explore My Portfolio <span class="arrow" aria-hidden="true">&rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="portfolio-card" id="about" data-section="about" aria-label="About Me">
+    <div class="card-inner card-inner--about">
+
+      <div class="about-photo">
+        <div class="photo-frame">
+          <span class="photo-placeholder">[PROFILE PHOTO]</span>
+          <img src="images/about/profile.jpg" alt="Allyza Aclan" onerror="this.remove()">
+        </div>
+        <p class="script-label photo-caption">Mabini, Batangas, Philippines</p>
+      </div>
+
+      <div class="about-copy">
+        <div class="about-head">
+          <p class="eyebrow-text">About Me</p>
+          <h2 class="section-title">Hello, I&rsquo;m Allyza</h2>
+          <p class="about-intro">I&rsquo;m a third-year BS Information Technology student, majoring in Business Analytics, at Batangas State University &ndash; The National Engineering University, Mabini Campus, with a growing passion for UI/UX design, digital graphics, and creative problem-solving.</p>
+
+          <ul class="trait-list">
+            <li>Creative</li><li>Curious</li><li>Detail-oriented</li><li>Willing to learn</li>
+            <li>Adaptable</li><li>User-focused</li><li>Collaborative</li><li>Responsible</li>
+            <li>Open to feedback</li><li>Problem-solving oriented</li>
+          </ul>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-block" role="button" tabindex="0" data-about-modal="education" aria-haspopup="dialog" aria-label="Open Education details">
+            <span class="block-plus" aria-hidden="true">+</span>
+            <h3>Education</h3>
+            <p class="timeline-role">BS Information Technology</p>
+            <p class="timeline-meta">Major in Business Analytics</p>
+            <p class="timeline-meta">Batangas State University &ndash; The National Engineering University, Mabini Campus</p>
+            <p class="timeline-status">3rd Year College Student</p>
+          </div>
+
+          <div class="about-block" role="button" tabindex="0" data-about-modal="skills" aria-haspopup="dialog" aria-label="Open Currently Developing Skills details">
+            <span class="block-plus" aria-hidden="true">+</span>
+            <h3>Currently Developing Skills</h3>
+            <ul class="skill-list">
+              <li><span>UI/UX Design</span><em>Learning</em></li>
+              <li><span>Digital Graphics</span><em>Growing Skill</em></li>
+              <li><span>Graphic Layout</span><em>Growing Skill</em></li>
+              <li><span>Visual Design</span><em>Learning</em></li>
+              <li><span>Creative Problem Solving</span><em>Developing</em></li>
+            </ul>
+          </div>
+
+          <div class="about-block" role="button" tabindex="0" data-about-modal="outside" aria-haspopup="dialog" aria-label="Open Outside the Screen details">
+            <span class="block-plus" aria-hidden="true">+</span>
+            <h3>Outside the Screen</h3>
+            <p class="timeline-meta">Volleyball &middot; Badminton &middot; Pageantry &middot; Creative competitions &middot; Leadership</p>
+          </div>
+
+          <div class="about-block about-block--goal" role="button" tabindex="0" data-about-modal="career" aria-haspopup="dialog" aria-label="Open Career Goal details">
+            <span class="block-plus" aria-hidden="true">+</span>
+            <h3>Career Goal</h3>
+            <p class="goal-text">To become a skilled IT professional and build a career in the UI/UX design industry, creating meaningful and user-centered digital experiences.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="portfolio-card" id="projects" data-section="projects" aria-label="Projects">
+    <div class="card-inner card-inner--projects">
+
+      <div class="proj-head">
+        <h2 class="section-title">Projects</h2>
+        <p class="proj-tagline">A Canvas of Creativity</p>
+      </div>
+
+      <div class="gfx-caption">
+        <p>A collection of original graphic layouts, publication materials, infographics, templates, and other visual materials created for different creative and communication needs.</p>
+        <p>These designs can be used for publication materials, digital communication, promotional content, and other graphic design needs.</p>
+      </div>
+
+      <!-- Graphics gallery (images/projects/project-1 ... project-8) -->
+      <div class="gfx-stage" id="gfxStage" role="group" aria-roledescription="carousel" aria-label="Graphic design gallery">
+        <div class="gfx-track" id="gfxTrack"></div>
+        <button type="button" class="gfx-arrow gfx-arrow--prev" id="gfxPrev" aria-label="Previous graphic">&#8249;</button>
+        <button type="button" class="gfx-arrow gfx-arrow--next" id="gfxNext" aria-label="Next graphic">&#8250;</button>
+      </div>
+
+      <!-- UI project (image: images/projects/ui-smartpark.jpg, 4:3) -->
+      <div class="ui-section">
+        <div class="ui-card" role="button" tabindex="0" data-about-modal="ui" aria-haspopup="dialog" aria-label="Open SmartPark UI design">
+          <span class="block-plus" aria-hidden="true">+</span>
+          <div class="ui-card-thumb">
+            <span>[UI PREVIEW]</span>
+            <img src="images/projects/ui-smartpark.jpg" alt="SmartPark desktop UI preview" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="ui-card-body">
+            <p class="ui-label">UI/UX Design &middot; Desktop Application</p>
+            <h3 class="ui-title">SmartPark</h3>
+            <p class="ui-desc">A desktop UI design for SmartPark, a parking management system that simplifies parking space monitoring and vehicle management. It features an organized parking map, spot availability indicators, and intuitive controls for parking and unparking vehicles.</p>
+            <p class="ui-hint">Click to view full design</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== ADVOCACY ========== -->
+  <section class="portfolio-card" id="advocacy" data-section="advocacy" aria-label="Advocacy">
+    <div class="card-inner card-inner--advocacy">
+
+      <div class="adv-head">
+        <p class="adv-eyebrow">A Filipino Documentary Feature</p>
+        <h2 class="section-title">Stories That Deserve To Be Seen.</h2>
+        <p class="adv-tagline">Look closer. Listen closer. Understand more.</p>
+        <div class="adv-copy">
+          <p>Beyond the beauty of the Philippines are stories that often go unnoticed. This page features documentaries that reveal the realities, struggles, and experiences of Filipino communities, bringing attention to issues that deserve to be seen and understood.</p>
+          <p>I advocate for awareness through storytelling, using documentaries to shed light on the realities of our country that are often overlooked or unheard. I believe that by helping people see these stories, we can encourage Filipinos to listen, learn, question, and understand the issues affecting our communities. Because awareness is a step toward meaningful change.</p>
+        </div>
+      </div>
+
+      <div class="video-grid" id="videoGrid"></div>
+
+      <div class="adv-notice">
+        <h3>Courtesy and Copyright Notice</h3>
+        <p class="adv-notice-sub">Documentary Credits and Acknowledgment</p>
+        <div class="adv-notice-cols">
+          <p>The documentaries featured in this portfolio are original works of their respective creators and publishers. All rights belong to GMA Public Affairs, I-Witness, Kara David, and any other credited contributors, as applicable. Full documentary links direct viewers to the original sources.</p>
+          <p>The descriptions and reflections presented on this page were independently written for educational, informational, and awareness purposes. No ownership of the original documentaries is claimed.</p>
+          <p>Copyright belongs to the respective owners. All rights reserved.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- ========== SHOP ========== -->
+  <section class="portfolio-card" id="shop" data-section="shop" aria-label="Shop">
+    <div class="card-inner card-inner--shop">
+
+      <div class="shop-head">
+        <p class="shop-eyebrow">@ally's creates</p>
+        <h2 class="section-title">Little Things, Thoughtfully Created.</h2>
+        <p class="shop-desc">A little space for creativity, cute finds, and things made with heart. From adorable everyday accessories to ready-to-print designs and digital goodies, there's something here for every creative soul. Whether you're looking for something cute to collect or a design to bring to life, find your next little favorite here.</p>
+      </div>
+
+      <div class="filter-group" role="tablist" aria-label="Filter products by category">
+        <button type="button" class="filter-chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button type="button" class="filter-chip" data-filter="physical" role="tab" aria-selected="false">Physical Products</button>
+        <button type="button" class="filter-chip" data-filter="digital" role="tab" aria-selected="false">Digital Products</button>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="portfolio-card" id="contact" data-section="contact" aria-label="Contact">
+    <div class="card-inner card-inner--contact">
+      <p class="script-label">Let&rsquo;s Connect</p>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-intro">Whether you&rsquo;d like to collaborate, talk about design, share ideas, or simply connect, I&rsquo;d be happy to hear from you.</p>
+
+      <div class="contact-layout">
+        <div class="contact-details">
+          <p><span>Name</span>Allyza Aclan</p>
+          <p><span>Email</span><a href="mailto:aclanallyza@gmail.com">aclanallyza@gmail.com</a></p>
+          <div class="social-links">
+            <a href="#" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook"><span class="soc-icon"><img src="images/social/facebook.png" alt="" onerror="this.parentNode.classList.add('no-img');this.remove()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>Facebook</a>
+            <a href="#" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><span class="soc-icon"><img src="images/social/instagram.png" alt="" onerror="this.parentNode.classList.add('no-img');this.remove()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>Instagram</a>
+            <a href="#" data-social="github" target="_blank" rel="noopener" aria-label="GitHub"><span class="soc-icon"><img src="images/social/github.png" alt="" onerror="this.parentNode.classList.add('no-img');this.remove()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 5l-4 14"/></svg></span>GitHub</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" name="name" required>
+          </div>
+          <div class="field">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="email" required>
+          </div>
+          <div class="field">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="carousel-controls">
+  <button type="button" class="carousel-arrow prev" id="prevCard" aria-label="Previous section">&#8592;</button>
+  <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Portfolio sections"></div>
+  <button type="button" class="carousel-arrow next" id="nextCard" aria-label="Next section">&#8594;</button>
+</div>
+
+</main>
+
+<!-- ========== ABOUT POP-UP CONTENT (images/about/) ========== -->
+
+<template id="tpl-education" data-size="md">
+  <h2 class="am-title">Education</h2>
+
+  <div class="am-edu">
+    <p class="am-degree">Bachelor of Science in Information Technology</p>
+    <p class="am-meta">Major in Business Analytics</p>
+    <p class="am-meta">Batangas State University &ndash; The National Engineering University</p>
+    <p class="am-meta">Mabini Campus</p>
+    <p class="am-years">2024 &ndash; Present</p>
+
+    <p class="am-text">Currently pursuing a Bachelor of Science in Information Technology with a major in Business Analytics, developing a foundation in technology, data, and problem-solving.</p>
+    <p class="am-text">Throughout my college journey, I have continued to strengthen both my technical and creative skills through academic projects, collaborative work, and hands-on experiences.</p>
+
+    <div class="am-achievement">
+      <h4>Academic Achievement</h4>
+      <p>&#127941; Consistent Honor Student</p>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-skills" data-size="md">
+  <h2 class="am-title">Currently Developing Skills</h2>
+  <p class="am-lead">A growing set of creative and technical skills shaped by projects, practice, and continuous learning.</p>
+
+  <div class="am-skill-list">
+    <div class="am-skill">
+      <div><h4>UI/UX Design</h4><p>Creating intuitive and user-centered digital experiences.</p></div>
+      <span class="am-chip">Currently Learning</span>
+    </div>
+    <div class="am-skill">
+      <div><h4>Digital Graphics</h4><p>Exploring visual concepts through digital art and creative design.</p></div>
+      <span class="am-chip">Developing</span>
+    </div>
+    <div class="am-skill">
+      <div><h4>Graphic Layout</h4><p>Creating organized and engaging layouts for different types of content.</p></div>
+      <span class="am-chip">Developing</span>
+    </div>
+    <div class="am-skill">
+      <div><h4>Visual Design</h4><p>Learning how composition, typography, and visual elements work together.</p></div>
+      <span class="am-chip">Currently Learning</span>
+    </div>
+    <div class="am-skill">
+      <div><h4>Creative Problem-Solving</h4><p>Finding practical and creative approaches to challenges and ideas.</p></div>
+      <span class="am-chip">Continuously Developing</span>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-career" data-size="md">
+  <h2 class="am-title">Career Goal</h2>
+  <p class="am-subtitle">Where I&rsquo;m Heading</p>
+
+  <p class="am-text">My goal is to build a career where technology and creativity come together. I aspire to grow as a UI/UX designer and IT professional, creating digital experiences that are not only visually engaging but also intuitive, accessible, and purposeful.</p>
+  <p class="am-text">As I continue my studies and gain experience, I want to strengthen my skills in user experience, visual design, problem-solving, and technology. I believe that good design goes beyond appearance. It should understand people, solve problems, and make technology easier to experience.</p>
+
+  <h3 class="am-heading">My Direction</h3>
+  <div class="am-dir-grid">
+    <div class="am-dir"><h4>Learn</h4><p>Continuously develop my technical and creative skills.</p></div>
+    <div class="am-dir"><h4>Create</h4><p>Turn ideas into thoughtful and meaningful digital experiences.</p></div>
+    <div class="am-dir"><h4>Grow</h4><p>Gain experience, embrace challenges, and become a better designer and IT professional.</p></div>
+    <div class="am-dir"><h4>Impact</h4><p>Create solutions that are useful, engaging, and centered on the people who use them.</p></div>
+  </div>
+</template>
+
+<!-- UI project (images/projects/ui-smartpark.jpg, 11:7) -->
+<template id="tpl-ui" data-size="lg">
+  <p class="ui-label ui-label--center">UI/UX Design &middot; Desktop Application</p>
+  <h2 class="am-title">SmartPark</h2>
+  <div class="ui-frame">
+    <span>[UI DESIGN]</span>
+    <img src="images/projects/ui-smartpark.jpg" alt="SmartPark desktop UI design" onerror="this.remove()">
+  </div>
+  <p class="am-text ui-modal-desc">A desktop UI design for SmartPark, a parking management system that simplifies parking space monitoring and vehicle management. It features an organized parking map, spot availability indicators, and intuitive controls for parking and unparking vehicles.</p>
+</template>
+
+<template id="tpl-outside" data-size="lg">
+  <h2 class="am-title">Outside the Screen</h2>
+  <p class="am-lead">Beyond design and technology, I find inspiration in the things I enjoy, the challenges I take on, and the experiences that help me grow.</p>
+
+  <!-- Sports -->
+  <section class="am-section">
+    <div class="am-section-head">
+      <div>
+        <h3>Sports</h3>
+        <p class="am-sub">Volleyball &amp; Badminton</p>
+      </div>
+      <p>Staying active through sports while building discipline, teamwork, and determination both on and off the court.</p>
+    </div>
+
+    <p class="am-strip-label">Volleyball</p>
+    <div class="photo-strip">
+      <div class="photo-slot"><span>Volleyball 1</span><img src="images/about/volleyball-1.jpg" alt="Volleyball photo 1" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Volleyball 2</span><img src="images/about/volleyball-2.jpg" alt="Volleyball photo 2" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Volleyball 3</span><img src="images/about/volleyball-3.jpg" alt="Volleyball photo 3" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Volleyball 4</span><img src="images/about/volleyball-4.jpg" alt="Volleyball photo 4" loading="lazy" onerror="this.remove()"></div>
+    </div>
+
+    <p class="am-strip-label">Badminton</p>
+    <div class="photo-strip">
+      <div class="photo-slot"><span>Badminton 1</span><img src="images/about/badminton-1.jpg" alt="Badminton photo 1" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Badminton 2</span><img src="images/about/badminton-2.jpg" alt="Badminton photo 2" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Badminton 3</span><img src="images/about/badminton-3.jpg" alt="Badminton photo 3" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Badminton 4</span><img src="images/about/badminton-4.jpg" alt="Badminton photo 4" loading="lazy" onerror="this.remove()"></div>
+    </div>
+  </section>
+
+  <!-- Pageantry -->
+  <section class="am-section">
+    <div class="am-section-head">
+      <div>
+        <h3>Pageantry</h3>
+        <p class="am-sub">Confidence &amp; Expression</p>
+      </div>
+      <p>A space where I explore confidence, self-expression, and the courage to step forward and be seen.</p>
+    </div>
+    <div class="photo-strip">
+      <div class="photo-slot"><span>Pageantry 1</span><img src="images/about/pageantry-1.jpg" alt="Pageantry photo 1" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Pageantry 2</span><img src="images/about/pageantry-2.jpg" alt="Pageantry photo 2" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Pageantry 3</span><img src="images/about/pageantry-3.jpg" alt="Pageantry photo 3" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Pageantry 4</span><img src="images/about/pageantry-4.jpg" alt="Pageantry photo 4" loading="lazy" onerror="this.remove()"></div>
+    </div>
+  </section>
+
+  <!-- Competitions -->
+  <section class="am-section">
+    <div class="am-section-head">
+      <div>
+        <h3>Competitions</h3>
+        <p class="am-sub">Challenge &amp; Growth</p>
+      </div>
+      <p>Taking on challenges that push me to think creatively, perform under pressure, and continuously improve.</p>
+    </div>
+    <div class="photo-strip">
+      <div class="photo-slot"><span>Competition 1</span><img src="images/about/competitions-1.jpg" alt="Competition photo 1" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Competition 2</span><img src="images/about/competitions-2.jpg" alt="Competition photo 2" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Competition 3</span><img src="images/about/competitions-3.jpg" alt="Competition photo 3" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Competition 4</span><img src="images/about/competitions-4.jpg" alt="Competition photo 4" loading="lazy" onerror="this.remove()"></div>
+    </div>
+  </section>
+
+  <!-- Student Leadership -->
+  <section class="am-section">
+    <div class="am-section-head">
+      <div>
+        <h3>Student Leadership</h3>
+        <p class="am-sub">Service &amp; Leadership</p>
+      </div>
+      <p>Serving my fellow students as the Public Information Officer of the CICS Mabini Student Council and CICS Mabini Governor of the Supreme Student Council Alangilan&ndash;Mabini Campus, where I help connect students, support initiatives, and contribute to a stronger campus community.</p>
+    </div>
+    <div class="photo-strip">
+      <div class="photo-slot"><span>Leadership 1</span><img src="images/about/leadership-1.jpg" alt="Student leadership photo 1" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Leadership 2</span><img src="images/about/leadership-2.jpg" alt="Student leadership photo 2" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Leadership 3</span><img src="images/about/leadership-3.jpg" alt="Student leadership photo 3" loading="lazy" onerror="this.remove()"></div>
+      <div class="photo-slot"><span>Leadership 4</span><img src="images/about/leadership-4.jpg" alt="Student leadership photo 4" loading="lazy" onerror="this.remove()"></div>
+    </div>
+  </section>
+</template>
+
+<!-- ========== MODALS ========== -->
+
+<!-- About pop-up -->
+<div class="modal-overlay" id="aboutOverlay" hidden>
+  <div class="modal about-modal" id="aboutModal" role="dialog" aria-modal="true" aria-label="Details">
+    <button type="button" class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    <div class="about-modal-body" id="aboutModalBody"></div>
+  </div>
+</div>
+
+<!-- Product detail -->
+<div class="modal-overlay" id="productModalOverlay" hidden>
+  <div class="modal product-modal" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+    <button type="button" class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    <div id="productModalBody"></div>
+  </div>
+</div>
+
+<!-- Cart drawer -->
+<div class="modal-overlay" id="cartOverlay" hidden>
+  <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="cart-header">
+      <h2 id="cartTitle">Your Cart</h2>
+      <button type="button" class="modal-close" data-close-modal aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-summary">
+      <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">₱0.00</span></div>
+      <div class="cart-actions">
+        <button type="button" class="btn btn-ghost" id="emptyCartBtn">Empty Cart</button>
+        <button type="button" class="btn btn-ghost" data-close-modal>Continue Shopping</button>
+      </div>
+      <button type="button" class="btn btn-primary btn-full" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+</div>
+
+<!-- Checkout -->
+<div class="modal-overlay" id="checkoutOverlay" hidden>
+  <div class="modal checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <button type="button" class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    <h2 id="checkoutTitle">Checkout</h2>
+
+    <div class="co-summary" id="coSummary"></div>
+
+    <!-- Step 1: details -->
+    <form id="checkoutForm" novalidate>
+      <div class="field"><label for="custName">Full Name <span class="req">*</span></label><input type="text" id="custName" autocomplete="name" required></div>
+      <div class="field"><label for="custEmail">Email <span class="req">*</span></label><input type="email" id="custEmail" autocomplete="email" required></div>
+      <div class="field"><label for="custContact">Contact Number <span class="req">*</span></label><input type="tel" id="custContact" autocomplete="tel" placeholder="09XX XXX XXXX" required></div>
+      <div class="field" id="coAddressField"><label for="custAddress">Complete Address <span class="req">*</span></label><input type="text" id="custAddress" autocomplete="street-address" placeholder="House no., street, barangay, city, province" required></div>
+      <div class="field"><label for="custNotes">Order Notes <span class="opt">(optional)</span></label><textarea id="custNotes" rows="2"></textarea></div>
+
+      <fieldset class="pay-options">
+        <legend>Mode of Payment <span class="req">*</span></legend>
+        <label class="pay-option is-selected" id="ewalletOption">
+          <input type="radio" name="payment" value="ewallet" checked>
+          <span class="pay-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18"/><circle cx="16.5" cy="14.5" r="1.2"/></svg></span>
+          <span><span class="pay-name">GCash / Maya</span><span class="pay-sub">E-wallet</span></span>
+        </label>
+        <label class="pay-option" id="codOption">
+          <input type="radio" name="payment" value="COD">
+          <span class="pay-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+          <span><span class="pay-name">Cash on Delivery</span><span class="pay-sub">Pay when it arrives</span></span>
+        </label>
+      </fieldset>
+      <p class="co-hint" id="codNote" hidden>Digital products can only be paid through GCash / Maya.</p>
+
+      <div class="cart-row cart-row--total"><span>Total</span><span id="checkoutTotal">₱0.00</span></div>
+      <button type="submit" class="btn btn-primary btn-full" id="coSubmit" disabled>Continue to Payment</button>
+      <p class="co-hint" id="coHint">Please fill in all required fields to continue.</p>
+    </form>
+
+    <!-- Step 2: GCash / Maya payment -->
+    <div class="pay-step" id="paymentStep" hidden>
+      <div class="wallet-toggle" role="tablist" aria-label="Choose e-wallet">
+        <button type="button" class="wallet-btn is-active" data-wallet="GCash" role="tab" aria-selected="true">GCash</button>
+        <button type="button" class="wallet-btn" data-wallet="Maya" role="tab" aria-selected="false">Maya</button>
+      </div>
+      <p class="pay-amount-label">Amount to pay</p>
+      <p class="pay-amount" id="payAmount">₱0.00</p>
+      <div class="pay-qr" id="payQR"></div>
+      <p class="pay-account"><strong id="payAccountName"></strong><br><span id="payAccountNumber"></span></p>
+      <p class="pay-steps">Scan the QR code or send the exact amount to the number above, then enter your reference number below.</p>
+      <div class="field"><label for="payRef">Reference Number <span class="req">*</span></label><input type="text" id="payRef" maxlength="30" autocomplete="off" placeholder="e.g. 1234 567 890123"></div>
+      <button type="button" class="btn btn-primary btn-full" id="payBtn" disabled>Pay</button>
+      <button type="button" class="btn btn-ghost btn-full" id="payBack">Back</button>
+    </div>
+
+    <p class="co-error" id="checkoutError" role="alert" hidden></p>
+  </div>
+</div>
+
+<!-- Order confirmation -->
+<div class="modal-overlay" id="confirmationOverlay" hidden>
+  <div class="modal confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="confirmationTitle">
+    <button type="button" class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    <p class="script-label">Salamat po!</p>
+    <h2 id="confirmationTitle">Order Successfully Placed</h2>
+    <div id="confirmationBody" class="confirmation-body"></div>
+    <p class="form-disclaimer" id="confirmationNote"></p>
+    <button type="button" class="btn btn-primary" data-close-modal>Continue Browsing</button>
+  </div>
+</div>
+
+<!-- Video -->
+<div class="modal-overlay" id="videoOverlay" hidden>
+  <div class="modal video-modal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+    <button type="button" class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    <div id="videoModalBody"></div>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="footer-decor" aria-hidden="true"></div>
+  <p class="footer-name">Allyza Aclan</p>
+  <p class="footer-role">IT Student | Aspiring UI/UX Designer</p>
+  <div class="social-links">
+    <a href="#" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook"><span class="soc-icon"><img src="images/social/facebook.png" alt="" onerror="this.parentNode.classList.add('no-img');this.remove()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>Facebook</a>
+    <a href="#" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><span class="soc-icon"><img src="images/social/instagram.png" alt="" onerror="this.parentNode.classList.add('no-img');this.remove()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>Instagram</a>
+    <a href="#" data-social="github" target="_blank" rel="noopener" aria-label="GitHub"><span class="soc-icon"><img src="images/social/github.png" alt="" onerror="this.parentNode.classList.add('no-img');this.remove()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 5l-4 14"/></svg></span>GitHub</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Allyza Aclan. All rights reserved.</p>
+</footer>
+
+<script src="script.js?v=4"></script>
+</body>
+</html>

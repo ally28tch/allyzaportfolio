@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Admin — @ally's creates</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css?v=4">
+</head>
+<body>
+
+<div class="bg-layer" aria-hidden="true"></div>
+
+<!-- ========== LOGIN ========== -->
+<section class="login-wrap" id="loginView" hidden>
+  <form class="login-card" id="loginForm" novalidate>
+    <p class="script-label">@ally's creates</p>
+    <h1>Admin</h1>
+    <div class="field">
+      <label for="loginUser">Username</label>
+      <input type="text" id="loginUser" autocomplete="username" required>
+    </div>
+    <div class="field">
+      <label for="loginPass">Password</label>
+      <input type="password" id="loginPass" autocomplete="current-password" required>
+    </div>
+    <p class="form-error" id="loginError" role="alert" hidden></p>
+    <button type="submit" class="btn btn-primary btn-full" id="loginBtn">Log In</button>
+  </form>
+</section>
+
+<!-- ========== APP ========== -->
+<div id="appView" hidden>
+  <header class="adm-top">
+    <div class="adm-brand">
+      <span class="script-label">@ally's creates</span>
+      <strong>Admin</strong>
+    </div>
+    <nav class="adm-tabs" aria-label="Admin sections">
+      <button type="button" class="adm-tab is-active" data-tab="dashboard">Dashboard</button>
+      <button type="button" class="adm-tab" data-tab="orders">Orders <span class="badge" id="badgeOrders" hidden>0</span></button>
+      <button type="button" class="adm-tab" data-tab="products">Products</button>
+      <button type="button" class="adm-tab" data-tab="messages">Messages <span class="badge" id="badgeMessages" hidden>0</span></button>
+    </nav>
+    <div class="adm-actions">
+      <button type="button" class="btn btn-ghost btn-sm" id="refreshBtn">Refresh</button>
+      <a class="btn btn-ghost btn-sm" id="viewSite" href="index.html" target="_blank" rel="noopener">View Site</a>
+      <button type="button" class="btn btn-ghost btn-sm" id="logoutBtn">Log Out</button>
+    </div>
+  </header>
+
+  <main class="adm-main">
+    <p class="notice" id="notice" role="alert" hidden></p>
+
+    <!-- Dashboard -->
+    <section class="tab" id="tab-dashboard">
+      <button type="button" class="attention" id="attention" hidden></button>
+
+      <div class="stat-grid" id="statGrid"></div>
+
+      <div class="dash-cols">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Orders to handle</h2>
+            <button type="button" class="link-btn" data-goto="orders">View all orders</button>
+          </div>
+          <div id="dashOrders"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Latest messages</h2>
+            <button type="button" class="link-btn" data-goto="messages">View all</button>
+          </div>
+          <div id="dashMessages"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Orders -->
+    <section class="tab" id="tab-orders" hidden>
+      <div class="seg seg-wide" id="statusSeg" role="tablist" aria-label="Order status"></div>
+
+      <div class="toolbar">
+        <input type="search" id="fSearch" placeholder="Search order no., name, email or number" aria-label="Search orders">
+        <select id="fType" aria-label="Filter by product type">
+          <option value="">Physical and digital</option>
+          <option value="physical">Physical items only</option>
+          <option value="digital">Digital items only</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table class="adm-table">
+          <thead>
+            <tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th></tr>
+          </thead>
+          <tbody id="ordersBody"></tbody>
+        </table>
+      </div>
+      <p class="empty" id="ordersEmpty" hidden>No orders found.</p>
+    </section>
+
+    <!-- Products -->
+    <section class="tab" id="tab-products" hidden>
+      <p class="panel-sub prod-intro">Stock goes down automatically when someone orders on your portfolio. Turn on Sold out to mark a product as sold out on the site.</p>
+      <div class="table-wrap">
+        <table class="adm-table prod-table">
+          <thead>
+            <tr><th>Product</th><th>Price</th><th>In stock</th><th>Restock</th><th>Sold out</th></tr>
+          </thead>
+          <tbody id="productsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Messages -->
+    <section class="tab" id="tab-messages" hidden>
+      <div class="toolbar">
+        <div class="seg" role="tablist" aria-label="Message filter">
+          <button type="button" class="seg-btn is-active" data-mfilter="all">All</button>
+          <button type="button" class="seg-btn" data-mfilter="unread">Unread <span class="seg-count" id="segUnread" hidden>0</span></button>
+        </div>
+      </div>
+      <div class="msg-list" id="msgList"></div>
+      <p class="empty" id="msgEmpty" hidden>No messages yet.</p>
+    </section>
+
+  </main>
+</div>
+
+<!-- Order detail -->
+<div class="modal-overlay" id="orderOverlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+    <button type="button" class="modal-close" data-close aria-label="Close">&times;</button>
+    <div id="orderBody"></div>
+  </div>
+</div>
+
+<script src="admin.js?v=4"></script>
+</body>
+</html>
